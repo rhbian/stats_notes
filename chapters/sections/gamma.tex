@@ -47,13 +47,104 @@ For every positive integer n,
 &=(n-1)!
 \end{split}
 \end{equation}
-
 \end{proof}
 \end{theorem}
 
 
+\begin{theorem}{}{}
+For each α > 0 and each β > 0,
+\begin{equation}\label{}
+\int_{0}^{\infty}x^{\alpha-1}e^{-\beta x}dx=\frac{\Gamma(\alpha)}{\beta^\alpha}
+\end{equation}
+\end{theorem}
+\begin{proof}
+令$y=\beta x$，则有$x=y/\beta$，以及$dx = dy/\beta$。
+\begin{equation}\label{}
+\begin{split}
+\begin{WithArrows}
+\int_{0}^{\infty}x^{\alpha-1}e^{-\beta x}dx&=\int_{0}^{\infty} \frac{y^{\alpha-1}}{\beta^{\alpha-1}}e^{-y}\frac{1}{\beta}dy\\
+&=\frac{1}{\beta^{\alpha}}\int_{0}^{\infty}y^{\alpha-1}e^{-y}dy\\
+&=\frac{\Gamma(\alpha)}{\beta^{\alpha}}
+\end{WithArrows}
+\end{split}
+\end{equation}
+\end{proof}
+
+\begin{definition}{Gamma Distributions}{}
+Let $\alpha$ and $\beta$ be positive numbers. A random variable $X$ has the gamma distribution with parameters $\alpha$ and $\beta$ if $X$ has a continuous distribution for which the $p.d.f.$ is
+%\begin{equation}\label{}
+%f(x|\alpha, \beta)=\begin{cases}
+%& \frac{\beta^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\beta x} &b \quad\text{for $x > 0$}\\
+%& 0 & b \quad\text{for $x \leqslant 0$}
+%\end{cases}
+%\end{equation}
+
+\begin{equation}\label{}
+f(x|\alpha, \beta)=\left\lbrace \begin{aligned}
+& \frac{\beta^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\beta x} &\quad\text{for $x > 0$}\\
+& 0 &\quad\text{for $x \leqslant 0$}
+\end{aligned}
+\right.
+\end{equation}
+\end{definition}
+
+\begin{theorem}{Moments}{}
+Let $X$ have the gamma distribution with parameters $\alpha$ and $\beta$. For $k =
+1, 2, \dots$
+\begin{equation}\label{}
+E(X^k)=\frac{\Gamma(\alpha+k)}{\beta^k\Gamma(\alpha)}=\frac{\alpha(\alpha+1)\cdots(\alpha+k-1)}{\beta^k}
+\end{equation}
+
+特别的，$E(X)=\frac{\alpha}{\beta}$，$Var(X)=\frac{\alpha}{\beta}$
+\end{theorem}
 
 
+\begin{proof}
+\begin{equation}\label{}
+\begin{split}
+E(X^k)&= \int_{0}^{\infty} x^kf(x|\alpha, \beta)dx= \int_{0}^{\infty} x^k \cdot \frac{\beta^\alpha}{\Gamma(\alpha)}x^{\alpha-1} e^{-\beta x}\\
+&=\frac{\beta^\alpha}{\Gamma(\alpha)} \int_{0}^{\infty}x^{\alpha+k-1}e^{-\beta x}dx\\
+&=\frac{\beta^\alpha}{\Gamma(\alpha)} \cdot \frac{\Gamma(\alpha+k)}{\beta^{\alpha+k}}\\
+&=\frac{\Gamma(\alpha+k)}{\Gamma(\alpha)\beta^k}
+\end{split}
+\end{equation}
+因此，$E(X)=\frac{\Gamma(\alpha+1)}{\Gamma(\alpha)\beta}=\frac{\alpha}{\beta}$，$Var(X)=E(X^2)-E^2(X)=\frac{(\alpha+1)\alpha}{\beta^2}-\frac{\alpha^2}{\beta^2}=\frac{\alpha}{\beta^2}$
+\end{proof}
 
+% 矩生成函数
+\begin{theorem}{Moment Generating Function}{}
+Let X have the gamma distribution with parameters α
+and β. The m.g.f. of X is
+\begin{equation}\label{}
+\psi(t)=(\frac{\beta}{\beta-t})^\alpha \quad\text{for $t<\beta$}
+\end{equation}
+\end{theorem}
+\begin{proof}
+\begin{equation}\label{}
+\begin{split}
+\psi(t)&=E(e^{tX})=\int_{0}^{\infty}e^{tx} \frac{\beta^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\beta x}dx\\
+&=\frac{\beta^\alpha}{\Gamma(\alpha)} \int_{0}^{\infty}x^{\alpha-1}e^{-(\beta-t)x}dx\\
+&=\frac{\beta^\alpha}{\Gamma(\alpha)} \frac{(\Gamma(\alpha))}{(\beta-t)^\alpha}\\
+&=(\frac{\beta}{(\beta-t)})^\alpha
+\end{split}
+\end{equation}
+\end{proof}
 
+% 可加性
+\begin{theorem}{}{}
+If the random variables X1, . . . , Xk are independent, and if Xi has the gamma
+distribution with parameters αi and β (i = 1, . . . , k), then the sum X1 + . . . + Xk
+has the gamma distribution with parameters α1 + . . . + αk and β.
+\end{theorem}
+
+\begin{proof}
+If $\psi_i(t)$ denotes the m.g.f. of Xi , then it follows from Eq. (5.7.15) that for
+i = 1, . . . , k,
+\begin{equation}\label{}
+\psi(t)=\prod\limits_{i=1}^{k}\psi_i(t)=(\frac{\beta}{\beta-t})^{\alpha_1+\cdots+\alpha_k} \quad\text{for $t < \beta$}
+\end{equation}
+The m.g.f. ψ can now be recognized as the m.g.f. of the gamma distribution with
+parameters α1 + . . . + αk and β. Hence, the sum X1 + . . . + Xk must have this gamma
+distribution.
+\end{proof}
 \end{document}

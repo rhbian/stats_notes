@@ -1,5 +1,28 @@
 \documentclass[../常见分布.tex]{subfiles}
 \begin{document}
 \section{指数分布}
-指数分布。
+\begin{definition}{Exponential Distributions}{}
+Let $\beta>0$. A random variable X has the exponential distribution with parameter $\beta$ if X has a continuous distribution with the $p.d.f.$
+\begin{equation}\label{}
+f(x|\beta)=\left\lbrace \begin{aligned}
+&\beta e^{-\beta x} &\quad\text{for $x > 0$}\\
+&0 &\quad\text{for $x \leqslant 0$}
+\end{aligned}
+\right.
+\end{equation}
+\end{definition}
+
+\begin{theorem}{}{}
+The exponential distribution with parameter $\beta$ is the same as the gamma distribution
+with parameters $\alpha = 1$ and $\beta$. If $X$ has the exponential distribution with parameter
+$\beta$, then
+$E(X)=\frac{1}{\beta} \quad\text{and}\quad Var(X)=\frac{1}{\beta^2}$
+
+\end{theorem}
+
+
+
+
+
+
 \end{document}
