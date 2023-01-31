@@ -182,12 +182,28 @@ If the random variables $X_1, \dots, X_k$ are independent and if $X_i$ has the n
 
 \end{theorem}
 \begin{proof}
-已知，正态分布的m.g.f为$\phi(t)=e^{\mu t+\frac{1}{2}\sigma^2t^2}$
+已知，$X_i$的m.g.f为$\psi_i(t)=e^{\mu t+\frac{1}{2}\sigma^2t^2}$，设$X_1+\cdots+X_k$的m.g.f为$\psi(x)$。
+由于独立性，可得
+\begin{equation}\label{}
+\begin{split}
+\psi(t)&=\prod\limits_{i=1}^{k}\psi_i(t)\\
+&=e^{(\sum\limits_{i=1}^{k} \mu_i)t + \frac{1}{2}(\sum\limits_{i=1}^{k}\sigma_i^2)t^2}
+\end{split}
+\end{equation}
 \end{proof}
 
-\begin{corollary}{推论}{}
-sfsf
+
+\begin{definition}{Sample Mean}{}
+Let $X_1, \dots, X_n$ be random variables. The average of these $n$ random
+variables, $\frac{1}{n}\sum\limits_{i=1}^{n}X_i$, is called their sample mean and is commonly denoted $\bar{X}_n$.
+\end{definition}
+
+\begin{corollary}{}{}
+Suppose that the random variables $X_1, \dots , X_n$ form a random sample from the
+normal distribution with mean $\mu$ and variance $\sigma^2$ , and let $\bar{X}_n$ denote their sample
+mean. Then $\bar{X}_n$ has the normal distribution with mean $\mu$ and variance $\frac{\sigma^2}{n}$.
 \end{corollary}
+
 
 
 \end{document}
