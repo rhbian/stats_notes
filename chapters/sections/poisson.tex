@@ -1,0 +1,135 @@
+\documentclass[../常见分布.tex]{subfiles}
+\begin{document}
+\section{泊松分布}
+the family of Possion distributions is used to model the number of such arrivals that occur in a \textbf{fixed time period}.
+
+\begin{definition}{Poisson Distribution 泊松分布}
+Poisson Distribution. Let λ > 0. A random variable X has the Poisson distribution
+with mean $\lambda$ if the p.f. of X is as follows:
+
+
+\begin{equation}\label{key}
+f(x|\lambda) = \begin{cases}
+\frac{\lambda^{x}}{x!}e^{-\lambda} & \text{for x in 0, 1, ...}\\
+0 & \text{otherwise}
+\end{cases}
+\end{equation}
+\end{definition}
+
+% 泊松分布均值
+\begin{theorem}{Poisson Mean}{PoissonMean}
+The mean of the distribution with p.f. equal to $\lambda$.
+\end{theorem}
+\begin{proof}
+\begin{equation}\label{}
+\begin{split}
+\begin{WithArrows}
+E(X) &= \sum\limits_{x=0}^{\infty}xf(x|\lambda)\\
+&=\sum\limits_{x=1}^{\infty}xf(x|\lambda)\\
+&=\sum\limits_{x=1}^{\infty}x\frac{e^{-\lambda}\lambda^{x}}{x!} \Arrow{let $y=x-1$}\\
+&=\lambda \sum\limits_{y=0}^{\infty}\frac{e^{-\lambda}\lambda^y}{y!}\\
+&=\lambda
+\end{WithArrows}
+\end{split}
+\end{equation}
+\end{proof}
+
+% 泊松分布方差
+\begin{theorem}{Poisson Variance}{PoissonVar}
+The variance of the Poisson distribution with mean $\lambda$ is also $\lambda$.
+\end{theorem}
+
+\begin{proof}
+\begin{equation}\label{}
+\begin{split}
+\begin{WithArrows}
+E[X(X-1)] &= \sum\limits_{x=0}^{\infty}x(x-1)f(x|\lambda)\\
+&=\sum\limits_{x=2}^{\infty}x(x-1)f(x|\lambda)\\
+&=\sum\limits_{x=2}^{\infty}x(x-1)\frac{e^{-\lambda}\lambda^{x}}{x!} \Arrow{let $y=x-2$}\\
+&=\lambda^2 \sum\limits_{y=0}^{\infty}\frac{e^{-\lambda}\lambda^y}{y!}\\
+&=\lambda^2\\
+E(X^2)-E(X) &=\lambda^2
+\end{WithArrows}
+\end{split}
+\end{equation}
+因此，
+\begin{equation}\label{}
+\begin{split}
+Var(X) &= E(X^2)-E^2(X)\\
+&=\lambda^2 + E(x)- E^2(X)\\
+&=\lambda
+\end{split}
+\end{equation}
+\end{proof}
+
+\begin{theorem}{Poisson Moment Generating Function}{}
+The m.g.f. of the Poisson distribution with mean $\lambda$ is
+\begin{equation}\label{}
+\psi(t)=e^{\lambda(e^t-1)}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+对于所有的$t (-\infty < t < \infty)$，
+\begin{equation}\label{}
+\begin{split}
+\psi(t) &= E(e^{tX})\\
+&=\sum\limits_{x=0}^{\infty} \frac{e^{tx}e^{-\lambda}\lambda^x}{x!}\\
+&=e^{-\lambda}\sum\limits_{x=0}^{\infty} \frac{((\lambda e^t))^x}{x!}\\
+&=e^{-\lambda} e^{\lambda e^{t}}\\
+&=e^{\lambda(e^t-1)}
+\end{split}
+\end{equation}
+\end{proof}
+
+% 均值可加性
+\begin{theorem}{}{}
+If the random variables $X_1, \cdots, X_k$ are independent and if $X_i$ has the Poisson distribution with mean $\lambda_i (i = 1, . . . , k)$, then the sum $X_1+\cdots+X_k$ has the Poisson distribution with mean $\lambda_1 + \cdots + \lambda_k$.
+\end{theorem}
+\begin{proof}
+let $\psi_i(t)$记为$X_i$的概率密度函数，$i=1, \cdots,k$，令$\psi(t)$为$X_1+\cdots+X_k$的概率密度函数，因为$X_1, \cdots,X_k$是独立的，因此
+\begin{equation}\label{}
+\psi(t)=\prod\limits_{i=1}^{k}\psi(t)=\prod\limits_{i=1}^{k}e^{\lambda_i(e^t-1)}=e^{(\lambda_1+\cdots+\lambda_k)(e^t-1)}
+\end{equation}
+\end{proof}
+
+
+\begin{theorem}{Closeness of Binomial and Poisson Distributions}{}
+
+For each integer n and each $0 < p < 1$, let $f (x|n, p)$ denote the p.f. of the binomial distribution with parameters $n$ and $p$. Let $f (x|\lambda)$ denote the p.f. of the Poisson distribution with mean $\lambda$. Let $\{p_n\}_{n=1}^{\infty}$ be a sequence of numbers between 0 and 1 such that $\lim\limits_{n \rightarrow \infty} np_n = \lambda$ . Then
+$$ \lim\limits_{n\rightarrow\infty}f(x|n, p_n) = f(x|\lambda) $$
+for all $x = 0, 1, \dots$
+\end{theorem}
+
+\begin{proof}
+\begin{equation}\label{}
+\begin{split}
+\begin{WithArrows}
+f(x|n, p_n) &= \frac{n(n-1)\cdots(n-x+1)}{x}p_n^x(1-p_n)^{n-x} \Arrow{let $\lambda_n=nP_n$, \\ so that $\lim\limits_{n\rightarrow \infty}\lambda_n = \lambda$} \\
+&=\frac{\lambda_n^x}{x!}\cdot \frac{n}{n} \cdot \frac{n-1}{n} \cdots \frac{n-x+1}{n}(1-\frac{\lambda_n}{n})^n(1-\frac{\lambda_n}{n})^{-x}
+\end{WithArrows}
+\end{split}
+\end{equation}
+
+对于所有的$x \geq 0$，
+\begin{equation}\label{}
+\lim\limits_{n\rightarrow \infty} \frac{n}{n} \cdot \frac{n-1}{n} \cdots \frac{n-x+1}{n} \cdot (1-\frac{\lambda_n}{n})^{-x}=1
+\end{equation}
+\end{proof}
+
+
+
+
+
+
+
+\begin{definition}{Poisson Process泊松过程}
+A \textbf{Poisson process} with rate $\lambda$ per unit time is a process that satisﬁes the following two properties:
+\begin{enumerate}
+\item The number of arrivals in every fixed interval of time of length $t$ has the Poisson distribution with mean $\lambda t$.
+\item The numbers of arrivals in every collection of disjoint time intervals are independent.
+\end{enumerate}
+\end{definition}
+
+
+\end{document}

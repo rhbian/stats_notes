@@ -1,0 +1,215 @@
+\documentclass[../常见分布.tex]{subfiles}
+
+\begin{document}
+\section{正态分布}
+
+\begin{definition}{Normal Distribution}{}
+A random variable $X$ has the normal distribution with mean μ and variance σ 2 (−∞ < μ < ∞ and σ > 0) if X has a continuous distribution with the
+following $p.d.f.$
+\begin{equation}\label{}
+f(x|\mu, \sigma^2)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+\end{equation}
+for $-\infty < x < \infty$
+\end{definition}
+
+
+\begin{theorem}{}{}
+正态分布的概率密度函数积分为1。
+\begin{equation}\label{}
+\int_{-\infty}^{\infty}f(x|\mu, \sigma^2)dx = 1
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+let $y = \frac{x-\mu}{\sigma}$，then
+\begin{equation}\label{}
+\int_{-\infty}^{\infty}f(x|\mu, \sigma^2)dx = \int_{-\infty}^{\infty}\frac{1}{\sqrt{2\pi}}e^{-\frac{y^2}{2}}dy
+\end{equation}
+let $I=\int_{-\infty}^{\infty} e^{-\frac{y^2}{2}}dy$，then
+\begin{equation}\label{}
+\begin{split}
+\begin{WithArrows}
+I^2 &= \int_{-\infty}^{\infty}e^{-\frac{y^2}{2}}dy \int_{-\infty}^{\infty}e^{-\frac{z^2}{2}}dz\\
+&=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty} e^{-\frac{y^2+z^2}{2}}dydz \Arrow{let $y=r\cos\theta $, $z=r\sin\theta $ \\then $dydz=rdrd\theta$}\\
+&=\int_{0}^{2\pi}\int_{0}^{\infty} e^{-\frac{r^2}{2}} r drd\theta\\
+&=\int_{0}^{2\pi}1 d\theta\\
+&=2\pi
+\end{WithArrows}
+\end{split}
+\end{equation}
+故有，$\text{原式}=1$
+\end{proof}
+
+\begin{theorem}{Moment Generating Function}{}
+The m.g.f. of the distribution with p.d.f. given by
+Eq. (5.6.1) is
+\begin{equation}\label{}
+\psi(t) = e^{\mu t + \frac{1}{2}\sigma^2 t^2}
+\end{equation}
+for $-\infty < t < \infty$
+\end{theorem}
+\begin{proof}
+\begin{equation}\label{}
+\begin{split}
+\psi(t)&=E(e^{tX})\\
+&=\int_{-\infty}^{\infty} \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}} e^{tx}dx\\
+&=\int_{-\infty}^{\infty} \frac{1}{\sqrt{2\pi}\sigma}e^{tx-\frac{(x-\mu)^2}{2\sigma^2}}dx
+\end{split}
+\end{equation}
+下面来分析$tx - \frac{(x-\mu)^2}{2\sigma^2}$
+
+
+\begin{equation}
+\begin{split}
+\begin{WithArrows}
+tx-\frac{(x-\mu)^2}{2\sigma^2}&=-\frac{x^2-2\mu x+\mu^2 - 2t\sigma^2 x}{2\sigma^2}\\
+&=-\frac{x^2-(2\mu+2t\sigma^2)x+\mu^2}{2\sigma^2} \Arrow{合并成$(x-\mu)^2$的形式}\\
+&=-\frac{[x-(\mu+t\sigma^2)]^2+\mu^2 -(\mu+t\sigma^2)^2}{2\sigma^2} \Arrow{简化}\\
+&=\mu t+\frac{1}{2}t^2\sigma^2-\frac{[x-(\mu+t\sigma^2)]^2}{2\sigma^2}
+\end{WithArrows}
+\end{split}
+\end{equation}
+
+因此，原式$\psi(t)$为
+\begin{equation}
+\begin{split}
+\begin{WithArrows}
+\psi(t) &= e^{\mu t+\frac{1}{2}t^2\sigma^2}\cdot \int_{-\infty}^{\infty} \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{[x-(\mu+t\sigma^2)]^2}{2\sigma^2}}\\
+&=e^{\mu t+\frac{1}{2}t^2\sigma^2}
+\end{WithArrows}
+\end{split}
+\end{equation}
+\end{proof}
+
+
+\begin{theorem}{Mean and Variance}{}
+The mean and variance of the distribution with p.d.f. given by
+Eq. (5.6.1) are μ and σ 2 , respectively.
+\end{theorem}
+\begin{proof}
+$\psi(t)$的一阶导数和二阶导数为：
+\begin{equation*}\label{}
+\begin{split}
+\psi^{'}(t) &=(\mu+t\sigma^2)e^{\mu t+\frac{1}{2}t^2\sigma^2}\\
+\psi^{''}(t)&=([\mu+t\sigma^2]^2+\sigma^2)e^{\mu t+\frac{1}{2}t^2\sigma^2}
+\end{split}
+\end{equation*}
+在$t=0$处，
+\begin{equation*}\label{}
+\begin{split}
+\psi^{'}(0)=\mu\\
+\psi^{''}(0)=\mu^2 + \sigma^2
+\end{split}
+\end{equation*}
+
+因此，
+\begin{equation*}\label{}
+\begin{split}
+E(X)&=\psi^{'}(0)=\mu\\
+Var(X)&=\psi^{''}{0}-[\psi^{'}(0)]^2=\sigma^2
+\end{split}
+\end{equation*}
+\end{proof}
+
+
+\begin{theorem}{Linear Transformations}{}
+If X has the normal distribution with mean μ and variance σ 2 and if Y = aX + b,
+where a and b are given constants and a = 0, then Y has the normal distribution with
+mean aμ + b and variance a 2 σ 2 .
+\end{theorem}
+\begin{proof}
+已知$X$的$m.g.f$为$\psi(t)=e^{\mu t + \frac{1}{2}\sigma^2t^2}$，令$\psi_Y$记作$Y$的$m.g.f$，则有
+\begin{equation}\label{}
+\begin{split}
+\psi_Y(t)&=E(e^{t(aX+b)})\\
+&=e^{tb}E(e^{taX})\\
+&=e^{tb}\psi(at)\\
+&=e^{tb}e^{a\mu t +\frac{1}{2}a^2\sigma^2t^2}\\
+&=e^{(a\mu+b)t+\frac{1}{2}a^2\sigma^2t^2}
+\end{split}
+\end{equation}
+因此，均值为$a\mu+b$，方差为$a^2\sigma^2$
+\end{proof}
+
+
+\begin{definition}{Standard Normal Distribution}{}
+The normal distribution with mean 0 and variance 1 is
+called the \textbf{standard normal distribution}. The p.d.f. of the standard normal distribution
+is usually denoted by the symbol $\phi$, and the c.d.f. is denoted by the symbol $\Phi$. Thus,
+\begin{equation}\label{}
+\phi(x)=f(x|0,1)=\frac{1}{\sqrt{2\pi}e^{-\frac{x^2}{2}}} \quad\text{for $-\infty < x < \infty$}
+\end{equation}
+and
+\begin{equation}\label{}
+\Phi(x)=\int_{-\infty}^{x}\phi(u)du \quad\text{for$-\infty < x < \infty$}
+\end{equation}
+\end{definition}
+
+\begin{theorem}{Consequences of Symmetry}{}
+For all x and all 0 < p < 1
+\begin{equation}\label{}
+\Phi(-x)=1-\Phi(x) \quad and \quad \Phi^{-1}(p) = -\Phi^{-1}(1-p)
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+由于$\phi(x)$是关于y轴的偶函数。因此，对于所有的$x(-\infty<x<\infty)$，$p(X\leqslant x) = p(X \geqslant x)$，即$\Phi(x)=1-\Phi(-x)$
+
+第二个公式，$x=\Phi^{-1}(p)$，$-x=\Phi^{-1}(1-p)$
+\end{proof}
+
+\begin{theorem}{Converting Normal Distributions to Standard}{}
+Let X have the normal distribution with
+mean μ and variance σ 2 . Let F be the c.d.f. of X. Then Z = (X − μ)/σ has the
+standard normal distribution, and, for all x and all 0 < p < 1,
+\begin{equation}\label{}
+F(x)=\Phi(\frac{x-\mu}{\sigma})
+\end{equation}
+\begin{equation}\label{}
+F^{-1}(p)=\mu+\sigma\Phi^{-1}(p)
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+令$Z = \frac{X-\mu}{\sigma}$，
+\begin{equation}\label{}
+F(x)=p(X \leqslant x)=p(\frac{X-\mu}{\sigma}\leqslant \frac{x-\mu}{\sigma})=p(Z\leqslant \frac{x-\mu}{\sigma})=\Phi(\frac{x-\mu}{\sigma})
+\end{equation}
+\end{proof}
+
+\begin{theorem}{Linear Combinations of Normally Distributed Variables}{}
+If the random variables $X_1, \cdots, X_k$ are independent and if Xi has the normal distribution with mean $\mu_i$ and variance $\sigma_i^2(i=1,\cdots,k)$, then the sum $X_1, \cdots, X_k$ has the normal distribution with mean  $\mu_1, \cdots, \mu_k$ and variance $\sigma_1^2, \cdots, \sigma_k^2$.
+
+\end{theorem}
+\begin{proof}
+s
+\end{proof}
+
+\begin{corollary}{推论}{}
+sfsf
+\end{corollary}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
