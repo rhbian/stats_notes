@@ -1,0 +1,59 @@
+\documentclass[../常见分布.tex]{subfiles}
+
+\begin{document}
+\section{Gamma分布}
+
+\begin{definition}{The Gamma Function}{}
+For each positive number α, let the value $\Gamma(\alpha)$ be deﬁned by
+the following integral:
+\begin{equation}\label{}
+\Gamma(\alpha) = \int\limits_{0}^{\infty}x^{\alpha-1}e^{-x}dx
+\end{equation}
+The function $\Gamma$ deﬁned by Eq. (5.7.2) for $\alpha > 0$ is called the gamma function.
+\end{definition}
+
+\begin{theorem}{}{}
+if $\alpha > 1$, then
+\begin{equation}\label{}
+\Gamma(\alpha)=(\alpha-1)\Gamma(\alpha-1)
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+We shall apply the method of integration by parts to the integral in Eq. (5.7.2).
+If we let $u=x^{\alpha-1}$ and $dv=e^{-x}dx$, then $du=(\alpha-1)x^{\alpha-2}dx$ and $v=-e^{-x}$. Therefore,
+\begin{equation}\label{}
+\begin{split}
+\Gamma(\alpha)&=\int_{0}^{\infty}udv=[uv]_0^{\infty}-\int_{0}^{\infty}vdu\\
+&=[-x^{\alpha-1}e^{-x}]_0^{\infty} + (\alpha-1)\int_{0}^{\infty}x^{\alpha-2}e^{-x}dx\\
+&=0+(\alpha-1)\Gamma(\alpha-1)
+\end{split}
+\end{equation}
+\end{proof}
+
+
+\begin{theorem}{}{}
+For every positive integer n,
+\begin{equation}\label{}
+\Gamma(n)=(n-1)!
+\end{equation}
+
+\begin{proof}
+\begin{equation}\label{}
+\begin{split}
+\Gamma(n)&=(n-1)\Gamma(n-1)\\
+&=(n-1)(n-2)\Gamma(n-2)\\
+&=(n-1)(n-2)\cdots(1)\Gamma(1)\\
+&=(n-1)!
+\end{split}
+\end{equation}
+
+\end{proof}
+\end{theorem}
+
+
+
+
+
+
+\end{document}

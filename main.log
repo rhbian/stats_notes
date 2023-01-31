@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021 Gentoo Linux) (preloaded format=xelatex 2023.1.27)  31 JAN 2023 10:55
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021 Gentoo Linux) (preloaded format=xelatex 2023.1.27)  31 JAN 2023 12:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1687,20 +1687,30 @@ Missing character: There is no σ ("3C3) in font ntx-Regular-tlf-t1!
 Missing character: There is no − ("2212) in font ntx-Regular-tlf-t1!
 Missing character: There is no μ ("3BC) in font ntx-Regular-tlf-t1!
 Missing character: There is no σ ("3C3) in font ntx-Regular-tlf-t1!
- [7])) [8] (./main.aux)
+ [7]) (./chapters/./sections/gamma.tex
+Missing character: There is no α ("3B1) in font ntx-Regular-tlf-t1!
+Missing character: There is no ﬁ ("FB01) in font ntx-Regular-tlf-t1!
+Missing character: There is no ﬁ ("FB01) in font ntx-Regular-tlf-t1!
+
+
+LaTeX Font Warning: Font shape `TU/FandolKai-Regular(0)/b/n' undefined
+(Font)              using `TU/FandolKai-Regular(0)/m/n' instead on input line 4
+1.
+
+[8])) [9] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 224747E25BF83650CFADB621C3DB8786;909.
+(rerunfilecheck)             Checksum: CCDF6971D79631786ADDFECA05C2C6AD;1026.
  ) 
 Here is how much of TeX's memory you used:
- 38614 strings out of 478866
- 809327 string characters out of 5866088
+ 38626 strings out of 478866
+ 809606 string characters out of 5866088
  1481582 words of memory out of 5000000
- 57716 multiletter control sequences out of 15000+600000
+ 57726 multiletter control sequences out of 15000+600000
  435670 words of font info for 87 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  118i,23n,136p,543b,1460s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (8 pages).
+Output written on main.pdf (9 pages).
