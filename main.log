@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021 Gentoo Linux) (preloaded format=xelatex 2023.1.27)  1 FEB 2023 11:14
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021 Gentoo Linux) (preloaded format=xelatex 2023.1.27)  1 FEB 2023 12:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1590,11 +1590,12 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [1
 
 
-] [2
+]
+(./chapters/special_distributions.tex [2
 
 ]
 第\nobreakspace {}1{}\nobreakspace {}章 1.
-(./chapters/special_distributions/sections/poisson.tex
+(./chapters/./sections/poisson.tex
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 14.4pt on input line 3.
 
@@ -1658,7 +1659,7 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 
 ]
 Missing character: There is no ﬁ ("FB01) in font ntx-Regular-tlf-t1!
- [4]) (./chapters/special_distributions/sections/normal.tex
+ [4]) (./chapters/./sections/normal.tex
 Missing character: There is no μ ("3BC) in font ntx-Regular-tlf-t1!
 Missing character: There is no σ ("3C3) in font ntx-Regular-tlf-t1!
 Missing character: There is no − ("2212) in font ntx-Regular-tlf-t1!
@@ -1685,7 +1686,7 @@ Missing character: There is no σ ("3C3) in font ntx-Regular-tlf-t1!
 Missing character: There is no − ("2212) in font ntx-Regular-tlf-t1!
 Missing character: There is no μ ("3BC) in font ntx-Regular-tlf-t1!
 Missing character: There is no σ ("3C3) in font ntx-Regular-tlf-t1!
-) (./chapters/special_distributions/sections/gamma.tex
+) (./chapters/./sections/gamma.tex
 Missing character: There is no α ("3B1) in font ntx-Regular-tlf-t1!
 Missing character: There is no ﬁ ("FB01) in font ntx-Regular-tlf-t1!
 Missing character: There is no ﬁ ("FB01) in font ntx-Regular-tlf-t1!
@@ -1709,8 +1710,8 @@ Missing character: There is no ψ ("3C8) in font ntx-Regular-tlf-t1!
 Missing character: There is no α ("3B1) in font ntx-Regular-tlf-t1!
 Missing character: There is no α ("3B1) in font ntx-Regular-tlf-t1!
 Missing character: There is no β ("3B2) in font ntx-Regular-tlf-t1!
- [9]) (./chapters/special_distributions/sections/exponential.tex [10])
-(./chapters/special_distributions/sections/beta.tex
+ [9]) (./chapters/./sections/exponential.tex [10])
+(./chapters/./sections/beta.tex
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 (Font)              scaled to size 10.0pt on input line 11.
 
@@ -1719,7 +1720,7 @@ l.29 \right.
             
 I'm ignoring a \right that had no matching \left.
 
-) [11] (./main.aux)
+)) [11] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1727,12 +1728,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 4258543497630D5DD84994137325CCB2;716.
  ) 
 Here is how much of TeX's memory you used:
- 38727 strings out of 478866
- 811302 string characters out of 5866088
+ 38734 strings out of 478866
+ 811137 string characters out of 5866088
  1481582 words of memory out of 5000000
- 57832 multiletter control sequences out of 15000+600000
+ 57833 multiletter control sequences out of 15000+600000
  435652 words of font info for 86 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 118i,23n,136p,543b,1370s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 118i,23n,136p,543b,1437s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on main.pdf (11 pages).
