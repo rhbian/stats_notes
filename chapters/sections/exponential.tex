@@ -17,8 +17,60 @@ The exponential distribution with parameter $\beta$ is the same as the gamma dis
 with parameters $\alpha = 1$ and $\beta$. If $X$ has the exponential distribution with parameter
 $\beta$, then
 $E(X)=\frac{1}{\beta} \quad\text{and}\quad Var(X)=\frac{1}{\beta^2}$
-
+and the m.g.f. of $X$ is 
+\begin{equation}\label{}
+\psi(t)=\frac{\beta}{\beta-t} \quad\text{for $t < \beta$}
+\end{equation}
 \end{theorem}
+
+
+\begin{proof}
+根据Gamma分布，指数分布是Gamma的一个特例，$Gamma(\alpha=1, \beta)$，因此期望$E(X)=\frac{\alpha}{\beta}=\frac{1}{\beta}$，$Var(X)=\frac{\alpha}{\beta^2}=\frac{1}{\beta^2}$，$\psi(t)=(\frac{\beta}{\beta-t})^\alpha=\frac{\beta}{\beta-t}$
+\end{proof}
+
+\begin{theorem}{Memoryless Property of Exponential Distributions}{}
+Let $X$ have the exponential distribution with parameter $\beta$, and let $t > 0$. Then for every number $h > 0$,
+\begin{equation}\label{}
+p(X\geqslant t + h| X \geqslant t) = p(X \geqslant h)
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+for each $t > 0$,
+\begin{equation}\label{}
+p(X \geqslant t)=\int_{t}^{\infty} \beta e^{-\beta x}dx=e^{-\beta t}
+\end{equation}
+因此，对于所有的$t>0$以及$h>0$，
+\begin{equation}\label{}
+\begin{split}
+p(X\geqslant t+h| x \geqslant t)&=\frac{p(x \geqslant t+h)}{p(X \geqslant t)}\\
+&=\frac{e^{-\beta (t+h)}}{e^{-\beta t}}\\
+&=e^{-\beta h}\\
+&=p(X\geqslant h)
+\end{split}
+\end{equation}
+\end{proof}
+
+
+\begin{theorem}{}{}
+Suppose that the variables $X_1,\dots, X_n$ form a random sample from the exponential distribution with parameter $\beta$. Then the distribution of $Y_1 = \min\{X_1,\dots , X_n\}$ will be the exponential distribution with parameter $n\beta$.
+\end{theorem}
+
+\begin{proof}
+for every number $t > 0$,
+\begin{equation}\label{}
+\begin{split}
+p(Y_1 > t)&=p(X_1>t, \dots, X_n>t)\\
+&=p(X_1>t)\cdots p(X_n>t)\\
+&=e^{-\beta t}\cdots e^{-\beta t}\\
+&=e^{-n\beta t}
+\end{split}
+\end{equation}
+\end{proof}
+
+
+
+
 
 
 
