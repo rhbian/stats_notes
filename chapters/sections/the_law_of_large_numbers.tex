@@ -1,0 +1,102 @@
+\documentclass[../large_random_samples.tex]{subfiles}
+\begin{document}
+% 大数定律
+\section{大数定律}
+\begin{theorem}{Markov Inequality}{}
+Suppose that $X$ is a random variable such that $p(X \geqslant 0) = 1$. Then
+for every real number $t > 0$,
+\begin{equation}\label{}
+p(X \geqslant t)\leqslant \frac{E(X)}{t}
+\end{equation}
+\end{theorem}
+\begin{proof}
+离散情况下
+\begin{equation}\label{}
+E(X)=\sum_{x}xf(x)=\sum_{x<t}xf(x)+\sum_{x\geqslant t}xf(x)
+\end{equation}
+由于$X\geqslant 0$，所有项都大于0。因此
+\begin{equation}\label{}
+E(X)\geqslant\sum_{x\geqslant t}xf(x)\geqslant \sum_{x\geqslant t}tf(x)=t\cdot p(X\geqslant t)
+\end{equation}
+
+连续情况下
+\begin{equation}\label{}
+\begin{split}
+E(X)&=\int_{0}^{\infty}xf(x)dx\\
+&=\int_{0}^{t}xf(x)dx + \int_{t}^{\infty}xf(x)dx\\
+&\geqslant \int_{t}^{\infty}xf(x)dx\\
+&\geqslant \int_{t}^{\infty}tf(x)dx\\
+&=t\cdot p(X\geqslant t)
+\end{split}
+\end{equation}
+\end{proof}
+
+\begin{theorem}{Chebyshev Inequality}{}
+Let $X$ be a random variable for which $Var(X)$ exists. Then for every number $t > 0$,
+\begin{equation}\label{}
+p(|X-E(X)|\geqslant t)\leqslant \frac{Var(X)}{t^2}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+令$Y=[X-E(X)^2]$，则$E(Y)=Var(X)$，
+\begin{equation}\label{}
+p(|X-E(X)|\geqslant t)=p(Y\geqslant t^2)\leqslant \frac{E(Y)}{t^2}=\frac{Var(X)}{t^2}
+\end{equation}
+\end{proof}
+
+\begin{theorem}{Mean and Variance of the Sample Mean}{}
+Let $X_1, \dots , X_n$ be a random sample from a distribution with mean $\mu$ and variance $\sigma^2$ . Let $\bar{X}_n$ be the sample mean. Then
+$E(\bar{X}_n)=\mu$ and $Var(\bar{X}_n)=\frac{\sigma^2}{n}$.
+\end{theorem}
+
+\begin{definition}{Convergence in Probability}{}
+A sequence $Z_1, Z_2, \dots$ of random variables converges to $b$ in probability if for every number $\varepsilon > 0$,
+\begin{equation}\label{}
+\lim\limits_{n\rightarrow \infty}p(|Z_n-b|<\varepsilon)=1
+\end{equation}
+
+This property is denoted by
+\begin{equation}\label{}
+Z_n \xrightarrow{p} b
+\end{equation}
+and is sometimes stated simply as $Z_n$ converges to b in probability.
+\end{definition}
+
+\begin{theorem}{Law of Large Numbers}{}
+Suppose that $X_1,\dots, X_n$ form a random sample from a distribution for which the mean is $\mu$ and for which the variance is ﬁnite. Let $\bar{X}_n$ denote the sample mean. Then
+\begin{equation}\label{}
+\bar{X}_n \xrightarrow{\enskip p \enskip} \mu
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Let the variance of each $X_i$ be $\sigma^2$. It then follows from the Chebyshev inequality that for every number $\varepsilon > 0$,
+\begin{equation}\label{}
+p(|\bar{X}_n-\mu|<\varepsilon)\geqslant 1-\frac{\sigma^2}{n\varepsilon^2}
+\end{equation}
+因此，
+\begin{equation}\label{}
+\lim_{n\rightarrow \infty} p(|\bar{X}_n - \mu|<\varepsilon)=1
+\end{equation}
+which means that $\bar{X}_n \xrightarrow{\enskip p \enskip} \mu$.
+\end{proof}
+
+\begin{theorem}{Continuous Functions of Random Variables}{}
+If $Z_n \xrightarrow{\enskip p\enskip} b$, and if $g(z)$ is a function that is continuous at $z = b$, then$ g(Z_n) \xrightarrow{\enskip p\enskip} g(b)$.
+\end{theorem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

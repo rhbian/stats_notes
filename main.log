@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021 Gentoo Linux) (preloaded format=xelatex 2023.1.27)  1 FEB 2023 12:49
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021 Gentoo Linux) (preloaded format=xelatex 2023.1.27)  1 FEB 2023 17:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1460,32 +1460,32 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 )
 
 LaTeX Warning: Unused global option(s):
-    [a4,single].
+    [single].
 
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-Package hyperref Info: Link coloring ON on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+Package hyperref Info: Link coloring ON on input line 8.
  (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1497,9 +1497,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count419
 )
-LaTeX Info: Redefining \ref on input line 10.
-LaTeX Info: Redefining \pageref on input line 10.
-LaTeX Info: Redefining \nameref on input line 10.
+LaTeX Info: Redefining \ref on input line 8.
+LaTeX Info: Redefining \pageref on input line 8.
+LaTeX Info: Redefining \nameref on input line 8.
 
 (./main.out) (./main.out)
 \@outlinefile=\write8
@@ -1541,7 +1541,7 @@ LaTeX Info: Redefining \nameref on input line 10.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 10.
+LaTeX Info: Redefining \selectfont on input line 8.
 \c@mv@tabular=\count420
 \c@mv@boldtabular=\count421
 Package caption Info: Begin \AtBeginDocument code.
@@ -1564,9 +1564,9 @@ Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
 )
 \c@lstlisting=\count423
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 10.0pt on input line 11.
+(Font)              scaled to size 10.0pt on input line 9.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 17.28pt on input line 11.
+(Font)              scaled to size 17.28pt on input line 9.
  (./main.toc
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 2.
 
@@ -1595,9 +1595,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ]
 第\nobreakspace {}1{}\nobreakspace {}章 1.
-(./chapters/./sections/poisson.tex
+(./chapters/./sections/normal.tex
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 14.4pt on input line 3.
+(Font)              scaled to size 14.4pt on input line 4.
 
 
 Package fontspec Warning: Font "FandolKai-Regular" does not contain requested
@@ -1615,11 +1615,13 @@ Package fontspec Info: Font family 'FandolKai-Regular(0)' created for font
 (fontspec)             <->"[FandolKai-Regular.otf]/OT:language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
-Missing character: There is no λ ("3BB) in font ntx-Regular-tlf-t1!
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 7.0pt on input line 13.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.0pt on input line 13.
+Missing character: There is no μ ("3BC) in font ntx-Regular-tlf-t1!
+Missing character: There is no σ ("3C3) in font ntx-Regular-tlf-t1!
+Missing character: There is no − ("2212) in font ntx-Regular-tlf-t1!
+Missing character: There is no ∞ ("221E) in font ntx-Regular-tlf-t1!
+Missing character: There is no μ ("3BC) in font ntx-Regular-tlf-t1!
+Missing character: There is no ∞ ("221E) in font ntx-Regular-tlf-t1!
+Missing character: There is no σ ("3C3) in font ntx-Regular-tlf-t1!
 
 Package fontspec Warning: Font "FandolFang-Regular" does not contain requested
 (fontspec)                Script "CJK".
@@ -1652,35 +1654,28 @@ Package fontspec Info: Font family 'FandolFang-Regular(0)' created for font
 \g__witharrows_y_initial_dim=\dimen377
 \g__witharrows_y_final_dim=\dimen378
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.0pt on input line 33.
+(Font)              scaled to size 9.0pt on input line 38.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 9.0pt on input line 33.
-[3
-
-]
-Missing character: There is no ﬁ ("FB01) in font ntx-Regular-tlf-t1!
- [4]) (./chapters/./sections/normal.tex
-Missing character: There is no μ ("3BC) in font ntx-Regular-tlf-t1!
-Missing character: There is no σ ("3C3) in font ntx-Regular-tlf-t1!
-Missing character: There is no − ("2212) in font ntx-Regular-tlf-t1!
-Missing character: There is no ∞ ("221E) in font ntx-Regular-tlf-t1!
-Missing character: There is no μ ("3BC) in font ntx-Regular-tlf-t1!
-Missing character: There is no ∞ ("221E) in font ntx-Regular-tlf-t1!
-Missing character: There is no σ ("3C3) in font ntx-Regular-tlf-t1!
-
+(Font)              scaled to size 9.0pt on input line 38.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 7.0pt on input line 40.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 5.0pt on input line 40.
 
 LaTeX Font Warning: Font shape `TU/FandolFang-Regular(0)/m/it' undefined
 (Font)              using `TU/FandolFang-Regular(0)/m/n' instead on input line 
 70.
 
-[5]
+[3
+
+]
 Missing character: There is no μ ("3BC) in font ntx-Regular-tlf-t1!
 Missing character: There is no σ ("3C3) in font ntx-Regular-tlf-t1!
 Missing character: There is no μ ("3BC) in font ntx-Regular-tlf-t1!
 Missing character: There is no σ ("3C3) in font ntx-Regular-tlf-t1!
 Missing character: There is no μ ("3BC) in font ntx-Regular-tlf-t1!
 Missing character: There is no σ ("3C3) in font ntx-Regular-tlf-t1!
- [6]
+ [4]
 Missing character: There is no μ ("3BC) in font ntx-Regular-tlf-t1!
 Missing character: There is no σ ("3C3) in font ntx-Regular-tlf-t1!
 Missing character: There is no − ("2212) in font ntx-Regular-tlf-t1!
@@ -1690,7 +1685,7 @@ Missing character: There is no σ ("3C3) in font ntx-Regular-tlf-t1!
 Missing character: There is no α ("3B1) in font ntx-Regular-tlf-t1!
 Missing character: There is no ﬁ ("FB01) in font ntx-Regular-tlf-t1!
 Missing character: There is no ﬁ ("FB01) in font ntx-Regular-tlf-t1!
- [7]
+ [5]
 
 LaTeX Font Warning: Font shape `TU/FandolKai-Regular(0)/b/n' undefined
 (Font)              using `TU/FandolKai-Regular(0)/m/n' instead on input line 4
@@ -1698,7 +1693,7 @@ LaTeX Font Warning: Font shape `TU/FandolKai-Regular(0)/b/n' undefined
 
 Missing character: There is no α ("3B1) in font ntx-Regular-tlf-t1!
 Missing character: There is no β ("3B2) in font ntx-Regular-tlf-t1!
-[8]
+[6]
 Missing character: There is no α ("3B1) in font ntx-Regular-tlf-t1!
 Missing character: There is no β ("3B2) in font ntx-Regular-tlf-t1!
 Missing character: There is no α ("3B1) in font ntx-Regular-tlf-t1!
@@ -1710,30 +1705,30 @@ Missing character: There is no ψ ("3C8) in font ntx-Regular-tlf-t1!
 Missing character: There is no α ("3B1) in font ntx-Regular-tlf-t1!
 Missing character: There is no α ("3B1) in font ntx-Regular-tlf-t1!
 Missing character: There is no β ("3B2) in font ntx-Regular-tlf-t1!
- [9]) (./chapters/./sections/exponential.tex [10])
+ [7]) (./chapters/./sections/exponential.tex [8])
 (./chapters/./sections/beta.tex
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 10.0pt on input line 11.
+(Font)              scaled to size 10.0pt on input line 10.
+)) (./chapters/large_random_samples.tex [9]
+第\nobreakspace {}2{}\nobreakspace {}章 2.
+(./chapters/./sections/the_law_of_large_numbers.tex [10
 
-! Extra \right.
-l.29 \right.
-            
-I'm ignoring a \right that had no matching \left.
-
+]
+Missing character: There is no ﬁ ("FB01) in font ntx-Regular-tlf-t1!
 )) [11] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4258543497630D5DD84994137325CCB2;716.
+(rerunfilecheck)             Checksum: 144F942CB4D3BB91701EBBEFB0FD4994;877.
  ) 
 Here is how much of TeX's memory you used:
- 38734 strings out of 478866
- 811137 string characters out of 5866088
- 1481582 words of memory out of 5000000
- 57833 multiletter control sequences out of 15000+600000
+ 38269 strings out of 478866
+ 801880 string characters out of 5866088
+ 1478537 words of memory out of 5000000
+ 57365 multiletter control sequences out of 15000+600000
  435652 words of font info for 86 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 118i,23n,136p,543b,1437s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 118i,23n,136p,543b,1419s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on main.pdf (11 pages).
