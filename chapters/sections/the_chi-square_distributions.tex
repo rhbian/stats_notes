@@ -1,0 +1,70 @@
+\documentclass[../../main.tex]{subfiles}
+
+\begin{document}
+\section{$\chi^2$分布}
+
+\begin{definition}{$\chi^2$分布}{}
+For each positive number $m$, the gamma distribution with parameters $\alpha=\frac{m}{2}$, and $\beta=\frac{1}{2}$ is called the $\chi^2$ distribution with $m$ degrees of freedom. 
+
+If a random variable $X$ has the $\chi^2$ distribution with $m$ degrees of freedom, the p.d.f. of $X$ for $x > 0$ is
+\begin{equation}\label{}
+f(x)=\frac{\beta^\alpha}{\Gamma(\alpha)} x^{\alpha-1}e^{-\beta x}=\frac{1}{2^{m/2}\Gamma(\frac{m}{2})}x^{\frac{m}{2}-1}e^{-\frac{x}{2}}
+\end{equation}
+Also, $f (x) = 0$ for $x \leqslant 0$.
+\end{definition}
+
+\begin{theorem}{Mean and Variance}
+If a random variable X has the $\chi^2$ distribution with m degrees of
+freedom, then E(X) = m and Var(X) = 2m.
+\end{theorem}
+m.g.f. of X is
+\begin{equation}\label{}
+\psi(t)=(\frac{1}{1-2t})^{m/2} \quad\text{for $t<\frac{1}{2}$}
+\end{equation}
+
+\begin{theorem}{}{}
+If the random variables $X_1, \dots, X_k$ are independent and if $X_i$ has the $\chi^2$ distribution with $m_i$ degrees of freedom $(i = 1, \dots, k)$, then the sum $X_1 + \dots + X_k$ has the $\chi^2$ distribution with $m_1, \dots, m_k$ degrees of freedom.
+\end{theorem}
+\begin{proof}
+证明可用$\Gamma$分布
+\end{proof}
+
+\begin{theorem}{}{}
+Let $X$ have the standard normal distribution. Then the random variable $Y=X^2$ has the $\chi^2$ distribution with one degree of freedom.
+\end{theorem}
+\begin{proof}
+需要证明$Y\sim \chi(1)$，或者说，服从$Y\sim Gamma(\frac{1}{2}, \frac{1}{2})$
+
+Let $f(y)$ and $F(y)$ denote, respectively, the p.d.f. and the c.d.f. of Y . Also, since X has the standard normal distribution, we shall let $\psi(x)$ and $\Psi(x)$ denote the p.d.f. and the c.d.f. of X. Then for y > 0,
+\begin{equation}\label{}
+\begin{split}
+p(Y\leqslant y)&=p(X^2\leqslant y)\\
+&=p(-y^{1/2} \leqslant X \leqslant y^{1/2})\\
+&=\Phi(y^{1/2}) - \Phi(-y^{1/2})
+\end{split}
+\end{equation}
+
+由于$f(y)=F^{'}(y)$以及$\phi(x)=\Phi^{'}(x)$，因此
+\begin{equation}\label{}
+f(y)=\Phi^{'}(y^{1/2})(\frac{1}{2}y^{-1/2}) - \Phi^{'}(-y^{1/2})(-\frac{1}{2}y^{-1/2})
+\end{equation}
+\end{proof}
+同时，因为$\phi(y^{1/2})=\phi(-y^{1/2})=\frac{1}{\sqrt{2\pi}}e^{-y/2}$，$\Gamma(\frac{1}{2})=\pi^{1/2}$此时，
+\begin{equation}\label{}
+\begin{split}
+f(y)&=\frac{1}{\sqrt{2\pi}}y^{-1/2}e^{-y/2}\\
+&\sim Gamma(\frac{1}{2}, \frac{1}{2})\\
+&\sim \chi^2(1)
+\end{split}
+\end{equation}
+
+\begin{corollary}
+If the random variables $X_1, \dots, X_m$ are i.i.d. with the standard normal distribution, then the sum of squares $X_1^2+\cdots+X_m^2$ 服从$\chi^2$分布，自由度为$m$。
+\end{corollary}
+If the random variables X1, . . . , Xm are i.i.d. with the standard normal distribution,2 has the χ 2 distribution with m degrees of
+then the sum of squares X12 + . . . + Xm
+freedom.
+
+
+
+\end{document}

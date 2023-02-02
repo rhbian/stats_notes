@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021 Gentoo Linux) (preloaded format=xelatex 2023.1.27)  1 FEB 2023 17:12
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021 Gentoo Linux) (preloaded format=xelatex 2023.1.27)  2 FEB 2023 14:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1591,11 +1591,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 ]
-(./chapters/special_distributions.tex [2
+(./chapters/chapters.tex [2
 
 ]
 第\nobreakspace {}1{}\nobreakspace {}章 1.
-(./chapters/./sections/normal.tex
+(./chapters/./sections/poisson.tex
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 14.4pt on input line 4.
 
@@ -1615,13 +1615,11 @@ Package fontspec Info: Font family 'FandolKai-Regular(0)' created for font
 (fontspec)             <->"[FandolKai-Regular.otf]/OT:language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
-Missing character: There is no μ ("3BC) in font ntx-Regular-tlf-t1!
-Missing character: There is no σ ("3C3) in font ntx-Regular-tlf-t1!
-Missing character: There is no − ("2212) in font ntx-Regular-tlf-t1!
-Missing character: There is no ∞ ("221E) in font ntx-Regular-tlf-t1!
-Missing character: There is no μ ("3BC) in font ntx-Regular-tlf-t1!
-Missing character: There is no ∞ ("221E) in font ntx-Regular-tlf-t1!
-Missing character: There is no σ ("3C3) in font ntx-Regular-tlf-t1!
+Missing character: There is no λ ("3BB) in font ntx-Regular-tlf-t1!
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 7.0pt on input line 14.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 5.0pt on input line 14.
 
 Package fontspec Warning: Font "FandolFang-Regular" does not contain requested
 (fontspec)                Script "CJK".
@@ -1654,28 +1652,35 @@ Package fontspec Info: Font family 'FandolFang-Regular(0)' created for font
 \g__witharrows_y_initial_dim=\dimen377
 \g__witharrows_y_final_dim=\dimen378
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.0pt on input line 38.
+(Font)              scaled to size 9.0pt on input line 34.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 9.0pt on input line 38.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 7.0pt on input line 40.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.0pt on input line 40.
+(Font)              scaled to size 9.0pt on input line 34.
+[3
+
+]
+Missing character: There is no ﬁ ("FB01) in font ntx-Regular-tlf-t1!
+ [4]) (./chapters/./sections/normal.tex
+Missing character: There is no μ ("3BC) in font ntx-Regular-tlf-t1!
+Missing character: There is no σ ("3C3) in font ntx-Regular-tlf-t1!
+Missing character: There is no − ("2212) in font ntx-Regular-tlf-t1!
+Missing character: There is no ∞ ("221E) in font ntx-Regular-tlf-t1!
+Missing character: There is no μ ("3BC) in font ntx-Regular-tlf-t1!
+Missing character: There is no ∞ ("221E) in font ntx-Regular-tlf-t1!
+Missing character: There is no σ ("3C3) in font ntx-Regular-tlf-t1!
+
 
 LaTeX Font Warning: Font shape `TU/FandolFang-Regular(0)/m/it' undefined
 (Font)              using `TU/FandolFang-Regular(0)/m/n' instead on input line 
 70.
 
-[3
-
-]
+[5]
 Missing character: There is no μ ("3BC) in font ntx-Regular-tlf-t1!
 Missing character: There is no σ ("3C3) in font ntx-Regular-tlf-t1!
 Missing character: There is no μ ("3BC) in font ntx-Regular-tlf-t1!
 Missing character: There is no σ ("3C3) in font ntx-Regular-tlf-t1!
 Missing character: There is no μ ("3BC) in font ntx-Regular-tlf-t1!
 Missing character: There is no σ ("3C3) in font ntx-Regular-tlf-t1!
- [4]
+ [6]
 Missing character: There is no μ ("3BC) in font ntx-Regular-tlf-t1!
 Missing character: There is no σ ("3C3) in font ntx-Regular-tlf-t1!
 Missing character: There is no − ("2212) in font ntx-Regular-tlf-t1!
@@ -1685,7 +1690,7 @@ Missing character: There is no σ ("3C3) in font ntx-Regular-tlf-t1!
 Missing character: There is no α ("3B1) in font ntx-Regular-tlf-t1!
 Missing character: There is no ﬁ ("FB01) in font ntx-Regular-tlf-t1!
 Missing character: There is no ﬁ ("FB01) in font ntx-Regular-tlf-t1!
- [5]
+ [7]
 
 LaTeX Font Warning: Font shape `TU/FandolKai-Regular(0)/b/n' undefined
 (Font)              using `TU/FandolKai-Regular(0)/m/n' instead on input line 4
@@ -1693,7 +1698,7 @@ LaTeX Font Warning: Font shape `TU/FandolKai-Regular(0)/b/n' undefined
 
 Missing character: There is no α ("3B1) in font ntx-Regular-tlf-t1!
 Missing character: There is no β ("3B2) in font ntx-Regular-tlf-t1!
-[6]
+[8]
 Missing character: There is no α ("3B1) in font ntx-Regular-tlf-t1!
 Missing character: There is no β ("3B2) in font ntx-Regular-tlf-t1!
 Missing character: There is no α ("3B1) in font ntx-Regular-tlf-t1!
@@ -1705,30 +1710,64 @@ Missing character: There is no ψ ("3C8) in font ntx-Regular-tlf-t1!
 Missing character: There is no α ("3B1) in font ntx-Regular-tlf-t1!
 Missing character: There is no α ("3B1) in font ntx-Regular-tlf-t1!
 Missing character: There is no β ("3B2) in font ntx-Regular-tlf-t1!
- [7]) (./chapters/./sections/exponential.tex [8])
+ [9]) (./chapters/./sections/exponential.tex [10])
 (./chapters/./sections/beta.tex
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 (Font)              scaled to size 10.0pt on input line 10.
-)) (./chapters/large_random_samples.tex [9]
+) [11]
 第\nobreakspace {}2{}\nobreakspace {}章 2.
-(./chapters/./sections/the_law_of_large_numbers.tex [10
+(./chapters/./sections/the_law_of_large_numbers.tex [12
 
 ]
 Missing character: There is no ﬁ ("FB01) in font ntx-Regular-tlf-t1!
-)) [11] (./main.aux)
+)
+(./chapters/./sections/the_central_limit_theorem.tex) [13]
+第\nobreakspace {}3{}\nobreakspace {}章 3.
+(./chapters/./sections/statistical_inference.tex) [14
+
+]
+第\nobreakspace {}4{}\nobreakspace {}章 4.
+(./chapters/./sections/the_chi-square_distributions.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\chi' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+[15
+
+]
+Missing character: There is no χ ("3C7) in font ntx-Regular-tlf-t1!
+) (./chapters/./sections/the_t_distributions.tex
+Missing character: There is no χ ("3C7) in font ntx-Regular-tlf-t1!
+Missing character: There is no ﬁ ("FB01) in font ntx-Regular-tlf-t1!
+)) [16] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 144F942CB4D3BB91701EBBEFB0FD4994;877.
+(rerunfilecheck)             Checksum: 65BE1035EEDCBB6091C4121B97AA5561;1881.
  ) 
 Here is how much of TeX's memory you used:
- 38269 strings out of 478866
- 801880 string characters out of 5866088
- 1478537 words of memory out of 5000000
- 57365 multiletter control sequences out of 15000+600000
- 435652 words of font info for 86 fonts, out of 8000000 for 9000
+ 38814 strings out of 478866
+ 814099 string characters out of 5866088
+ 1481537 words of memory out of 5000000
+ 57896 multiletter control sequences out of 15000+600000
+ 437362 words of font info for 93 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 118i,23n,136p,543b,1419s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 118i,23n,136p,543b,1437s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (11 pages).
+Output written on main.pdf (16 pages).
