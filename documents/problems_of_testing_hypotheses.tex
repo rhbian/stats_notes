@@ -1,0 +1,59 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\section{Problems of Testing Hypotheses 假设检验问题}
+\begin{definition}{Null and Alternative Hypotheses/Reject.}{}
+The hypothesis $H_0$ is called the null hypothesis and the hypothesis $H_1$ is called the alternative hypothesis. When performing a test, if
+we decide that $\theta$ lies in $\Omega_1$, we are said to reject $H_0$. If we decide that $\theta$ lies in $\Omega_0$, we are said not to reject $\Omega_0$.
+\end{definition}
+
+
+\begin{definition}{power function}{}
+Let $\delta$ be a test procedure. The function $\pi(\theta|\delta)$ is called the power function of the test $\delta$. If $S_1$ denotes the critical region of $\delta$, then the power function $\pi(\theta|\delta)$ is determined by the relation
+\begin{equation}\label{}
+\pi(\theta|\delta)=p(X\in S_1| \theta) \quad\text{for $\theta \in \Omega$}
+\end{equation}
+\end{definition}
+
+\begin{definition}{Type I/II Error}{}
+An erroneous decision to reject a true null hypothesis is a \textit{type I error},
+or an error of the ﬁrst kind. An erroneous decision not to reject a false null hypothesis is called a \textit{type II error}, or an error of the second kind.
+\begin{center}
+\begin{tabular}[H]{|c|c|c|}
+\hline
+Null Hypothesis & True & False \\
+\hline
+reject & \textbf{I} 类错误 &  \\
+\hline
+not reject &  &\textbf{II}类错误 \\
+\hline
+\end{tabular}
+\end{center}
+\end{definition}
+
+两类错误无法同时避免，我们尽可能的避免第一类错误（这种错误更严重）。即，使拒绝$H_0$出错的概率最低。或者，在一些情况下，有要证明的理论时，把要证明的结果放在备择假设($H_1$)中。
+
+
+\begin{definition}{Level/Size}{}
+A test that satisﬁes (9.1.6) is called a level $\alpha_0$ test, and we say that the test
+has level of signiﬁcance $\alpha_0$. In addition, the size $\alpha(\delta)$ of a test $\delta$ is deﬁned as follows:
+\begin{equation}\label{}
+\alpha(\delta)=\sup\limits_{\theta\in\Omega_0} \pi(\theta|\delta)
+\end{equation}
+\end{definition}
+
+\begin{corollary}{}{}
+A test $\delta$ is a level $\alpha_0$ test if and only if its size is at most $\alpha_0$ (i.e., $\alpha(\delta) \leqslant \alpha_0$). If the null hypothesis is simple, that is, $H_0:\theta = \theta_0$, then the size of $\delta$ will be $\alpha(\delta)=\pi(\theta_0|\delta)$.
+\end{corollary}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

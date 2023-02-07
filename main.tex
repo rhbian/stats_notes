@@ -2,26 +2,40 @@
 
 \usepackage{subfiles}
 \usepackage{witharrows} %使用WithArrows环境，增加公式逻辑注释。
+\usepackage{hyperref}
+
 \title{统计学常用手册}
 \author{卞儒汉}
 \date{\today}
 \begin{document}
+% 以section为核心，建立章节体系
+
 \tableofcontents
+%\subfile{./chapters/chapters.tex}
+
 \chapter*{序}
 
-% chapters
-% chapter 特殊分布
+\chapter{特殊分布}
+	\subfile{./documents/poisson.tex}
+	\subfile{./documents/normal.tex}
+	\subfile{./documents/gamma.tex}
+	\subfile{./documents/exponential.tex}
+	\subfile{./documents/beta.tex}
 
-\subfile{./chapters/chapters.tex}
+\chapter{大样本抽样}
+	\subfile{./documents/the_law_of_large_numbers.tex}
+	\subfile{./documents/the_central_limit_theorem.tex}
 
-%\subfile{./chapters/special_distributions.tex}
-%
-%% chapter 大样本抽样
-%\subfile{./chapters/large_random_samples.tex}
-%
-%% chapter 估计
-%\subfile{./chapters/estimation.tex}
-%
-%% chapter 抽样分布
-%\subfile{./chapters/sampling_distribution.tex}
+\chapter{估计}
+	\subfile{./documents/statistical_inference.tex}
+
+\chapter{抽样分布}
+	\subfile{./documents/the_chi-square_distributions.tex}
+	\subfile{./documents/the_t_distributions.tex}
+	\subfile{./documents/confidence_intervals.tex}
+
+\chapter{假设检验}
+	\subfile{./documents/problems_of_testing_hypotheses.tex}
+	\subfile{./documents/the_t_test.tex}
+
 \end{document}

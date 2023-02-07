@@ -1,0 +1,38 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\section{t Distributions}
+\begin{definition}{t Distributions}{}
+Consider two independent random variables Y and Z, such that Y has the χ 2 distribution with m degrees of freedom and Z has the standard normal distribution. Suppose that a random variable X is deﬁned by the equation
+\begin{equation}\label{}
+X = \dfrac{Z}{(\dfrac{Y}{m})^{1/2}}
+\end{equation}
+Then the distribution of X is called the t distribution with m degrees of freedom.
+\end{definition}
+
+\begin{theorem}{Probability Density Function}{}
+$t$分布在$m \dfrac{a}{b}$自由度下的概率密度函数为：
+\begin{equation}\label{}
+\dfrac{\Gamma(\frac{m+1}{2})}{(m\pi)^{1/2}\Gamma(\frac{m}{2})}{\left(1+\frac{x^2}{m}\right)}^{-(m+1)/2}\quad\text{for $-\infty<x<\infty$}
+\end{equation}
+\end{theorem}
+
+\begin{theorem}{}{}
+Suppose that $X_1, \dots, X_n$ form a random sample from the normal distribution with
+mean $\mu$ and variance $\sigma^2$ . Let $\bar{X}_n$ denote the sample mean, and deﬁne
+\begin{equation}\label{}
+\sigma^{'}=\left[ \dfrac{\sum\limits_{i=1}^{n}(X_i-\bar{X}_n)^2}{n-1} \right]^{1/2}
+\end{equation}
+则$\dfrac{n^{1/2}(\bar{X}_n-\mu)}{\sigma^{'}}\sim t(n-1)$
+\end{theorem}
+\begin{proof}
+定义$S_n^2=\sum\limits_{i=1}^{n}(X_i-\bar{X}_n)^2$，定义$Z=\dfrac{\bar{X}_n-\mu}{\sigma/n}$以及$Y=\dfrac{S_n^2}{\sigma^2}$
+
+由于Y与Z独立，且$Y\sim \chi^2(n-1)$，$Z\sim N(0, 1)$，定义$U$为
+\begin{equation}\label{}
+\begin{split}
+U&=\dfrac{Z}{\left(\dfrac{Y}{n-1}\right)^{1/2}}\\
+&=
+\end{split}
+\end{equation}
+\end{proof}
+\end{document}

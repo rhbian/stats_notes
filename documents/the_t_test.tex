@@ -1,0 +1,75 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{theorem}{Level and Unbiasedness of t Tests}{}
+令$X=(X_1, \dots, X_n)$来自于均值为$\mu$，方差为$\sigma^2$的正态分布。令$U$为统计量
+\begin{equation}\label{}
+U=\dfrac{\sqrt{n}(\bar{X}_n-\mu_0)}{s}
+\end{equation}
+其中，$s=\sqrt{\dfrac{1}{n-1}\sum\limits_{i=1}^{n}(X_i-\bar{X}_n)^2}$，令$c$为$t(n-1)$分布的$1-\alpha_0$分位数，令$\delta$为检验过程：如果$U\geqslant c$则拒绝$H_0$。则power function $\pi(\mu, \sigma^2|\delta)$有以下性质：
+
+\begin{enumerate}
+\item $\pi(\mu, \sigma^2|\delta) = \alpha_0$ when $\mu = \mu_0$ \label{item-1},
+\item $\pi(\mu, \sigma^2|\delta) < \alpha_0$ when $\mu < \mu_0$ \label{item-2},
+\item $\pi(\mu, \sigma^2|\delta) > \alpha_0$ when $\mu > \mu_0$ \label{item-3},
+\item $\pi(\mu, \sigma^2|\delta) \rightarrow 0$ when $\mu \rightarrow -\infty$ \label{item-4},
+\item $\pi(\mu, \sigma^2|\delta) \rightarrow 1$ when $\mu \rightarrow \infty \label{item-5}$,
+\end{enumerate}
+另外，检验过程$\delta$的size为$\alpha_0$并且无偏。
+\end{theorem}
+
+\begin{proof}
+如果$\mu=\mu_0$，则$U$服从$t$分布，自由度为$n-1$，因此，
+\begin{equation}\label{}
+\pi(\mu_0, \sigma^2|\delta) = p(U\geqslant c|\mu_0, \sigma^2) = \alpha_0.
+\end{equation}
+以上，证明了\ref{item-1}，对于\ref{item-2}和\ref{item-3}，定义：
+\begin{equation}\label{}
+U^* = \dfrac{n^{1/2}(\bar{X}_n-\mu)}{s} \quad\text{and}\quad W=\dfrac{n^{1/2}(\mu_0-\mu)}{s}
+\end{equation}
+构建$U=U^*-W$，首先，假设$\mu<\mu_0$，所以$W>0$，以下有：
+\begin{equation}\label{}
+\begin{split}
+\begin{WithArrows}
+\pi(\mu, \sigma^2|\delta) &= p(U\geqslant c| \mu, \sigma^2)\\
+&= p(U^* -W\geqslant c | \mu, \sigma^2)\\
+&= p(U^* \geqslant c+W|\mu, \sigma^2)\Arrow{由于$W>0$}\\
+&<p(U^* \geqslant c| \mu, \sigma^2)\Arrow{$U^*\sim t(n-1)$}\\
+&=\alpha_0
+\end{WithArrows}
+\end{split}
+\end{equation}
+同理，当$\mu > \mu_0$时，即$W<0$，所以可推导出$\pi(\mu, \sigma^2|\delta)>\alpha_0$when$\mu>\mu_0$
+\end{proof}
+
+\begin{corollary}{t Tests for Hpotheses}
+令$X=(X_1, \dots, X_n)$来自于均值为$\mu$，方差为$\sigma^2$的正态分布。令$U$为统计量
+\begin{equation}\label{}
+U=\dfrac{\sqrt{n}(\bar{X}_n-\mu_0)}{s}
+\end{equation}
+其中，$s=\sqrt{\dfrac{1}{n-1}\sum\limits_{i=1}^{n}(X_i-\bar{X}_n)^2}$，令$c$为$t(n-1)$分布的$1-\alpha_0$分位数，令$\delta$为检验过程：如果$U\leqslant c$则拒绝$H_0$。则power function $\pi(\mu, \sigma^2|\delta)$有以下性质：
+
+\begin{enumerate}
+\item $\pi(\mu, \sigma^2|\delta) = \alpha_0$ when $\mu = \mu_0$ \label{item-1},
+\item $\pi(\mu, \sigma^2|\delta) > \alpha_0$ when $\mu < \mu_0$ \label{item-2},
+\item $\pi(\mu, \sigma^2|\delta) < \alpha_0$ when $\mu > \mu_0$ \label{item-3},
+\item $\pi(\mu, \sigma^2|\delta) \rightarrow 1$ when $\mu \rightarrow -\infty$ \label{item-4},
+\item $\pi(\mu, \sigma^2|\delta) \rightarrow 0$ when $\mu \rightarrow \infty \label{item-5}$,
+\end{enumerate}
+另外，检验过程$\delta$的size为$\alpha_0$并且无偏。
+\end{corollary}
+
+\begin{theorem}{p-value for t test}{}
+假设我们在检验一个假设，假设为$\mu\geqslant\mu_0$或$\mu\leqslant\mu_0$，令$U=n^{1/2}\cdot\dfrac{\bar{X}_n-\mu_0}{s}$，令$u$为$U$的观测值。令$T_{n-1}(\cdot)$为$n-1$个自由的$t$分布的$c.d.f.$，假设（$H_0: \mu\leqslant\mu_0$）的$p-value$为$1-T_{n-1}(u)$，同时假设（$H_0:\mu\geqslant\mu_0$）的$p-value$为$T_{n-1}(u)$。
+\end{theorem}
+\begin{proof}
+令$T_{n-1}^{-1}(\cdot)$表示$n-1$个自由度的$t$分布的分位数。这是$T_{n-1}$是严格的增函数。拒绝原假设$H_0: \mu\leqslant\mu_0$当且仅当$u\geqslant T_{n-1}^{-1}(1-\alpha_0)$，等价于$T_{n-1}(u)\geqslant1-\alpha_0$，等价于$\alpha_0\geqslant1-T_{n-1}(u)$
+\end{proof}
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,50 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\section{置信区间}
+\begin{definition}{Conﬁdence Interval}{}
+Let $X = (X_1, \dots , X_n)$ be a random sample from a distribution that depends on a parameter (or parameter vector) $θ$ . Let $g(θ)$ be a real-valued function of $θ$. Let $A \leqslant B$ be two statistics that have the property that for all values of $θ$,
+\begin{equation}\label{}
+p(A < g(\theta) < B) \geqslant \gamma
+\end{equation}
+Then the random interval $(A, B)$ is called a coefficient $\gamma$ conﬁdence interval for $g(θ)$ or a $100\gamma$ percent conﬁdence interval for $g(θ)$. If the inequality “$\geqslant\gamma$” in Eq. (8.5.4)
+is an equality for all $\theta$ , the conﬁdence interval is called exact. After the values of the random variables $X_1, \dots , X_n$ in the random sample have been observed, the values of $A = a$ and $B = b$ are computed, and the interval $(a, b)$ is called the observed value of the conﬁdence interval.
+\end{definition}
+
+
+\begin{definition}{One-Sided Conﬁdence Intervals/Limits}{}
+Let $X = (X1, . . . , Xn)$ be a random sample from a distribution that depends on a parameter (or parameter vector) $\theta$. Let $g(\theta)$ be a real-valued function of $\theta$ . Let $A$ be a statistic that has the property that for all values of $\theta$, 
+\begin{equation}\label{}
+p(A < g(\theta)) \geqslant \gamma
+\end{equation}.
+Then the random interval $\left(A, \infty\right)$ is called a one-sided coeffcient $\gamma$ conﬁdence interval for $g(\theta)$ or a one-sided $100\gamma$ percent conﬁdence interval for $g(\theta)$. Also, $A$ is called a coefﬁcient $\gamma$ lower conﬁdence limit for $g(\theta)$ or a $100\gamma$ percent lower conﬁdence limit for $g(\theta)$. Similarly, if $B$ is a statistic such that 
+\begin{equation}\label{}
+p(g(\theta) < B) \geqslant \theta
+\end{equation}
+then $\left(−\infty, B\right)$ is a one-sided coefﬁcient $\gamma$ conﬁdence interval for $g(\theta)$ or a one-sided $100\gamma$ percent conﬁdence interval for $g(\theta)$ and $B$ is a coefﬁcient $	g$ upper conﬁdence limit Conﬁdence Intervals for $g(\theta)$ or a $100\gamma$ percent upper conﬁdence limit for $g(\theta)$. If the inequality “$\geqslant \gamma$ ” in either Eq. (8.5.5) or Eq. (8.5.6) is equality for all $\theta$, the corresponding conﬁdence
+interval and conﬁdence limit are called exact.
+\end{definition}
+
+
+
+\begin{theorem}{One-Sided Conﬁdence Intervals for the Mean of a Normal Distribution}{}
+Let $X_1, \dots, X_n$ be a random sample from the normal distribution with mean $\mu$ and variance.
+For each $0 < \gamma < 1$, the following statistics are, respectively, exact lower and upper
+coefﬁcient $\gamma$ conﬁdence limits for $\mu$:
+
+
+\begin{equation}\label{}
+\begin{split}
+A &= \bar{X}_n - T_{n-1}^{-1}(\gamma)\dfrac{\sigma^{'}}{n^{1/2}}\\
+B &= \bar{X}_n + T_{n-1}^{-1}(\gamma)\dfrac{\sigma^{'}}{n^{1/2}}
+\end{split}
+\end{equation}
+\end{theorem}
+
+\begin{definition}{p-value}{}
+In general, the p-value is the smallest level $\alpha_0$ such that we would reject the null-hypothesis at level $\alpha_0$ with the observed data.
+
+An experimenter who rejects a null hypothesis if and only if the p-value is at most $\alpha_0$ is using a test with level of signiﬁcance $\alpha_0$. Similarly, an experimenter who wants a level $\alpha_0$ test will reject the null hypothesis if and only if the p-value is at most $\alpha_0$. For this reason, the p-value is sometimes called \textit{the observed level of signiﬁcance}.
+\end{definition}
+
+\end{document}
