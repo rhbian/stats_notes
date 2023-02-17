@@ -2,6 +2,7 @@
 
 \begin{document}
 
+$t$检验面对的情况是均值和方差未知的情况。
 \begin{theorem}{Level and Unbiasedness of t Tests}{}
 令$X=(X_1, \dots, X_n)$来自于均值为$\mu$，方差为$\sigma^2$的正态分布。令$U$为统计量
 \begin{equation}\label{}
@@ -66,9 +67,6 @@ U=\dfrac{\sqrt{n}(\bar{X}_n-\mu_0)}{s}
 \begin{proof}
 令$T_{n-1}^{-1}(\cdot)$表示$n-1$个自由度的$t$分布的分位数。这是$T_{n-1}$是严格的增函数。拒绝原假设$H_0: \mu\leqslant\mu_0$当且仅当$u\geqslant T_{n-1}^{-1}(1-\alpha_0)$，等价于$T_{n-1}(u)\geqslant1-\alpha_0$，等价于$\alpha_0\geqslant1-T_{n-1}(u)$
 \end{proof}
-
-
-
 
 
 

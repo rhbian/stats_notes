@@ -2,16 +2,21 @@
 
 \begin{document}
 \section{Problems of Testing Hypotheses 假设检验问题}
-\begin{definition}{Null and Alternative Hypotheses/Reject.}{}
-The hypothesis $H_0$ is called the null hypothesis and the hypothesis $H_1$ is called the alternative hypothesis. When performing a test, if
-we decide that $\theta$ lies in $\Omega_1$, we are said to reject $H_0$. If we decide that $\theta$ lies in $\Omega_0$, we are said not to reject $\Omega_0$.
+假设检验问题专注于讨论一个分布的参数$\theta$是在参数空间的某个子集中，还是在这个子集的补集中。在一维空间中，这个讨论就简化为两个区间。本节中主要专注的是假设检验的方法论。也会给出一个假设检验和置信区间的等式关系。
+
+\begin{definition}{原假设与备择假设}{}
+假设$H_0$被成为原假设或零假设(the null hypothesis) ，假设$H_1$被称为备择假设(the alternative hypothesis)。当执行一个假设时，如果我们判定$\theta$在$\Omega_1$中，我们则拒绝原假设$H_0$。如果我们判定$\theta$在$\Omega_0$中，我们则称不拒绝原假设$\Omega_0$。
 \end{definition}
 
 
 \begin{definition}{power function}{}
-Let $\delta$ be a test procedure. The function $\pi(\theta|\delta)$ is called the power function of the test $\delta$. If $S_1$ denotes the critical region of $\delta$, then the power function $\pi(\theta|\delta)$ is determined by the relation
+令$\delta$为一个检验过程。函数$\pi(\theta|\delta)$被称为$\delta$的功效函数(power function)。如果$S_1$记为$\delta$的判别区域(critical region)，则the power function $\pi(\theta|\delta)$ 由以下关系来定义
 \begin{equation}\label{}
 \pi(\theta|\delta)=p(X\in S_1| \theta) \quad\text{for $\theta \in \Omega$}
+\end{equation}
+如果是在检验统计量$T$和拒绝域$R$中来讨论检验过程$\delta$，则power function为
+\begin{equation}\label{}
+\pi(\theta|\delta)=p(T\in R|\theta) \quad\text{for $\theta \in \Omega$}
 \end{equation}
 \end{definition}
 
@@ -47,10 +52,18 @@ A test $\delta$ is a level $\alpha_0$ test if and only if its size is at most $\
 \end{corollary}
 
 
+\begin{definition}{p-value}{}
+p值是在所有观测的数据基础上，能够拒绝原假设的最小显著性水平。
+\end{definition}
 
-
-
-
+\begin{theorem}{Deﬁning Conﬁdence Sets from Tests}{}
+置信区间。令$X=(X_1,\dots,X_n)$为从参数为$\theta$的总体中的随机取样。令$g(\theta)$为函数，假设每一个$g(\theta)$的可能值$g_0$，总存在一个level为$\alpha_0$的$\delta_{g_0}$的原假设。
+\begin{equation}\label{}
+H_{0, g_0}:g(\theta)=g_0, H_{1, g_0}: g(\theta)\neq g_0
+\end{equation}
+对于$X$中每一个可能的值$x$，定义：
+$\omega(x)={g_0: \delta_{g_0}\text{不拒绝}H_{0, g_0}} \quad\text{if}\quad X=x$被观测到。
+\end{theorem}
 
 
 

@@ -1,0 +1,53 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\section{最小二乘法}
+\begin{theorem}{最小二乘法}{}
+令$(x_1, y_1),\dots, (x_n, y_n)$为$n$个点组成的集合。通过这些点的直线满足最小方差的情况下，斜率(slope)和截距(intercept)分别为：
+\begin{equation}\label{Least-Squares}
+\begin{split}
+\hat{\beta_1}&=\dfrac{\sum\limits_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})}{\sum\limits_{i=1}^{n}(x_i-\bar{x})^2}\\
+\hat{\beta_0}&=\bar{y}-\hat{\beta_1}\bar{x}
+\end{split}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+根据最小方差原则，目标是使$(y_i-\hat{y_i})^2$最小。
+令$Q=[y_i - (\beta_0+\beta_1x_i)]^2$，分别对$\beta_0$和$\beta_1$求偏导，得到
+\begin{equation}\label{}
+\begin{split}
+-2\sum\limits_{i=1}^{n}[y_i-(\beta_0+\beta_1x_i)] &= 0\\
+-2\sum\limits_{i=1}^{n}[y_i-(\beta_0+\beta_1x_i)]x_i &=0
+\end{split}
+\end{equation}
+化简可得到
+\begin{equation}\label{}
+\begin{split}
+\sum\limits_{i=1}^{n}y_i &= n\beta_0+\beta_1\sum\limits_{i=1}^{n}x_i \\
+\sum\limits_{i=1}^{n}x_iy_i &= \beta_0\sum\limits_{i=1}^{n}x_i+\beta_1\sum\limits_{i=1}^{n}x_i^2
+\end{split}
+\end{equation}
+将$\beta_0=\bar{y}-\beta_1\bar{x}$带入第二个式子中，
+
+\begin{equation}\label{}
+\begin{split}
+\begin{WithArrows}
+\sum\limits_{i=1}^{n}x_iy_i &= (\bar{y}-\beta_1\bar{x})\sum\limits_{i=1}^{n}x_i + \beta_1\sum\limits_{i=1}^{n}x_i^2\\
+\sum\limits_{i=1}^{n}x_iy_i &= n\bar{x}\bar{y}-n\beta_1\bar{x}^2+\beta_1\sum\limits_{i=1}^{n}x_i^2\\
+\sum\limits_{i=1}^{n}x_iy_i &= n\bar{x}\bar{y}-n\beta_1\bar{x}^2+\beta_1\sum\limits_{i=1}^{n}x_i^2\\
+\hat{\beta_1}&=\dfrac{\sum\limits_{i=1}^{n}x_iy_i-n\bar{x}\bar{y}}{\sum\limits_{i=1}^{n}x_i^2-n\bar{x}^2} \Arrow{中心化形式}\\
+\hat{\beta_1}&=\dfrac{\sum\limits_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})}{\sum\limits_{i=1}^{n}(x_i-\bar{x})^2}
+\end{WithArrows}
+\end{split}
+\end{equation}
+\end{proof}
+
+\begin{definition}{Least-Squares Line}{}
+Let $\hat{\beta_0}$ and $\hat{\beta_1}$ be as deﬁned in \ref{Least-Squares}。 The line deﬁned by the equation $y = \hat{\beta_0} + \hat{\beta_1}x$ is called the least-squares line.
+
+\end{definition}
+
+
+
+\end{document}

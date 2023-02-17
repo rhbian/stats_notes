@@ -1,0 +1,67 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{definition}{The F distributions}{}
+The $F$ distributions. Let $Y$ and $W$ be independent random variables such that $Y$ has the $\chi^2$ distribution with m degrees of freedom and $W$ has the $\chi^2$ distribution with $n$ degrees of freedom, where $m$ and $n$ are given positive integers. Deﬁne a new random variable $X$ as follows:
+\begin{equation}\label{}
+X=\dfrac{Y/m}{W/n}
+\end{equation}
+Then the distribution of $X$ is called the $F$ distribution with $m$ and $n$ degrees of freedom.
+\end{definition}
+
+矩阵测试
+\begin{equation}\label{}
+\begin{bmatrix}
+a_{11} & a_{12} & \dots & a_{1n}\\
+a_{21} & a_{22} & \dots & a_{2n}\\
+\vdots & \vdots   & \ddots & \vdots \\
+a_{n1} & a_{n2} & \dots & a_{nn}
+\end{bmatrix}
+\end{equation}
+
+设 $A$ 是 $n \times n$ 矩阵，$B$ 是 $n \times n$ 矩阵，则有：
+\begin{equation*}
+\det(AB) = \det(A) \det(B)^2
+\end{equation*}
+
+证明如下：
+
+设 $C = AB$，$D_A = \det(A)$，$D_B = \det(B)$，$D_C = \det(C)$。
+
+根据行列式的定义，$D_A$ 可以表示成 $n$ 个 $A$ 的行列式的乘积：
+
+\begin{equation*}
+D_A = \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma) \prod_{i=1}^n A_{i,\sigma(i)}
+\end{equation*}
+
+类似地，$D_B$ 和 $D_C$ 也可以表示成对应矩阵元素的乘积之和。我们考虑 $D_C$ 的表达式，由于 $C = AB$，因此
+
+\begin{equation*}
+D_C = \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma) \prod_{i=1}^n (AB)_{i,\sigma(i)}
+\end{equation*}
+
+根据矩阵乘法的定义，$(AB){i,j} = \sum{k=1}^n A_{i,k}B_{k,j}$。因此，我们可以将 $D_C$ 表示为：
+
+\begin{align*}
+D_C &= \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma) \prod_{i=1}^n \sum_{k=1}^n A_{i,k}B_{k,\sigma(i)} \
+&= \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma) \sum_{k_1=1}^n \cdots \sum_{k_n=1}^n A_{1,k_1} \cdots A_{n,k_n} B_{k_1,\sigma(1)} \cdots B_{k_n,\sigma(n)}
+\end{align*}
+
+注意到上式中，$\sigma$ 是对称群 $S_n$ 中的一个置换，$k_1,\ldots,k_n$ 则是 $n$ 个独立的下标，因此对每个置换 $\sigma$，上式中总共有 $n!$ 个不同的 $k_1,\ldots,k_n$ 组合。将这些组合分为两类，一类是 $\sigma$ 是偶置换，另一类是 $\sigma$ 是奇置换。对于任意一个固定的组合 $k_1,\ldots,k_n$，置换 $\sigma$ 的奇偶性只有两种可能性，因此：
+
+\begin{align*}
+D_C &= \sum_{k_1=1}^n \cdots \sum_{k_n=1}^n A_{1,k_1} \cdots A_{n,k_n} \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma) B_{k_1,\sigma(1)} \cdots B_{k_n,\sigma(n)} \
+&= \sum_{k_1=1}^n \cdots \sum_{k_n=1}^n A_{1,k_1} \cdots A_{n,k_n} D_B
+\end{align*}
+
+因此，
+
+\begin{align*}
+\frac{D_C}{D_B} &= \sum_{k_1=1}^n \cdots \sum_{k_n=1}
+\frac{D_C}{D_B} &= \sum_{k_1=1}^n \cdots \sum_{k_n=1}^n A_{1,k_1} \cdots A_{n,k_n} \
+&= D_A
+\end{align*}
+
+也就是说，$\det(AB) = D_C = D_B \cdot D_A = \det(A) \cdot \det(B)^2$。证毕。
+\end{document}
