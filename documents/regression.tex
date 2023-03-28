@@ -1,0 +1,74 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\chapter{回归}
+最小二乘方法是在给定其他变量$x_1,\dots,x_k$的情况下，计算线性函数的系数，并来预测$y$的取值。我们假设$y$是从一系列随机变量中观测到的数值。在这种情况下，存在一个统计模型，在这种情况下，最小二乘方法成为了该模型中计算最大似然估计的方法。
+
+\begin{definition}{Response/Predictor/Regression}{}
+变量$X_1,\dots,X_k$被称为解释变量或者自变量，随机变量$Y$被称为被解释变量或者因变量。在给定数值$x_1,\dots,x_k$下，$Y$的条件期望被称为$Y$在$X_1,\dots,X_k$下的回归函数，或者成为Y在$X_1,\dots,X_k$下的回归。
+\end{definition}
+
+$Y$在$X_1,\dots,X_k$下的回归是一个函数，关于$X_1,\dots,X_k$观测值$x_1,\dots,x_k$的函数，记作$E(Y|x_1,\dots,x_k)$。
+
+本章中，我们假设回归函数的$E(Y|x_1,\dots,x_k)$为线性函数，函数形式为：
+\begin{equation}\label{}
+E(Y|x_1,\dots,x_k)=\beta_0+\beta_1x_1+\cdots+\beta_kx_k
+\end{equation}
+系数$\beta_0, . . . , \beta_k$被称为回归系数。假设的是回归系数未知。因此，这些系数被视为要估计的参数。同时我们假设n个向量已经被观测到。
+
+回归系数$\beta_0,..,\beta_k$的估计量可以被最小二乘法计算得到的估计值$\hat{\beta_0},\dots,\hat{\beta_k}$。对给定$X_1,\dots,X_k$的Y的条件分布增加更加具体的假设，来得到关于最小二乘估计量的更具体的性质。
+
+随机变量Y可以表示为形式$Y=\beta_0+\beta_1+\varepsilon$，其中$\varepsilon$是一个服从均值为0，方差为$\sigma^2$的正态分布的变量。则在给定$X=x$的条件下，$Y$的分布为均值为$\beta_0+\beta_1x$，方差为$\sigma^2$的正态分布。
+
+线性函数的线性，是指对参数$\beta_0$和$\beta_1$的线性函数。
+
+\begin{assumption}{Predictor is known.自变量数值已知。}{}
+值$x_1,\dots,x_n$为$X_1,\dots,X_k$的观测值，并且在估计前已知。
+\end{assumption}
+
+\begin{assumption}{Normality.正态性}
+对于$i=1,\dots,n$，在给定$x_1,\dots,x_n$的条件下$Y_i$的条件分布为正态分布。
+\end{assumption}
+
+\begin{assumption}{Linear Mean.均值线性}{}
+对于$i=1,\dots,n$，给定$x_1,\dots,x_n$下$Y_i$的条件均值为$\beta_0+\beta_1x_i$。
+\end{assumption}
+
+
+\begin{assumption}{Common Variance.常数均值}{}
+对于$i=1,\dots,n$，条件方差$var(Y_i|x_1,\dots,x_k)=\sigma^2$
+\end{assumption}
+
+\begin{assumption}{Independence. 独立性}{}
+随机变量$Y_1,\dots,Y_n$在$x_1,\dots, x_n$给定时，$Y_i$独立。
+\end{assumption}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
